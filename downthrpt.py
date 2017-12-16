@@ -20,7 +20,8 @@ def downthrpt():
      elif(model == 'lstm_onetoone'):
         prediction = lstm_mid_onetoone(features = np.array(features).reshape(1,1))
      elif(model == 'lstm_onetomany'):
-        #prediction = lstm_mid_onetomany(features = np.array(features).reshape(1,1))
-        prediction = lstm_mid_onetoone(features = np.array(features).reshape(1,1))
-        prediction = np.append(prediction,[300.5,300.5,300.5,300.5])
+        prediction = lstm_mid_onetomany(features = np.array(features).reshape(1,1))
+        prediction = prediction[0]
+     else:
+        prediction = np.empty(shape=[0, 1])
      return json.dumps(prediction.tolist())

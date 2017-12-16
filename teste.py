@@ -6,7 +6,7 @@ import re, json
 
 '''
 O parâmetro features é a vazão do tempo corrente (t) em KB/s 
-O parâmetro model é o modelo de predição
+O parâmetro model é o modelo de predição (lstm_onetomany, lstm_onetoone,rf,...)
 O serviço retorna uma lista com 5 valores de vazão em KB/s dos tempos t+1,...,t+5
 '''
 
