@@ -12,8 +12,17 @@ retorna uma lista vazia se o modelo não existir.
 '''
 
 url     = "http://127.0.0.1:8000/downthrpt"
-#data    = {'features': [1290.060800],'model': 'lstm_onetomany'}   #features: vazão em KB/s; model: modelo de predição
-data    = {'features': [2641.728512,1622.361088,1290.060800],'model': 'lstm_threetoone'}
 headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
+
+#Requisição para modelo gru_mid_threetofive
+data    = {'features': [1756.157952,2634.943488,1403.456512],'model': 'gru_mid_threetofive'}
 r       = requests.post(url, data=json.dumps(data), headers=headers)
+
+print("Modelo gru_mid_threetofive:")
+print r.text
+
+#Requisição para modelo gru_mid_threetoone
+data    = {'features': [1756.157952,2634.943488,1403.456512],'model': 'gru_mid_threetoone'}
+r       = requests.post(url, data=json.dumps(data), headers=headers)
+print("Modelo gru_mid_threetoone:")
 print r.text
