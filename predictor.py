@@ -14,7 +14,7 @@ scaler_MinMax = MinMaxScaler(feature_range=(-1, 1))
 
 scaler_MinMax = joblib.load('modelos/MinMaxScaler_model.pkl')
 scaler_StdScaler = joblib.load('modelos/StandardScaler_model.pkl')
-model_gruthreetofive = load_model("modelos/vanillagru_three2five_maxbw-exp_mdl.h5")
+model_gruthreetofive = load_model("modelos/vanillagru_three2five_maxbw6-6_mdl.h5")
 model_gruthreetoone = load_model("modelos/vanillagru_three2One_maxbw-exp_mdl.h5")
 
 def gru_mid_threetofive(features):
