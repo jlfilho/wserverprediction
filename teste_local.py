@@ -19,10 +19,10 @@ data    = {'features': [1756.157952,2634.943488,1403.456512],'model': 'gru_mid_t
 r       = requests.post(url, data=json.dumps(data), headers=headers)
 
 print("Modelo gru_mid_threetofive:")
-print r.text
+print(r.text)
 
 #Requisição para modelo gru_mid_threetoone
 data    = {'features': [1756.157952,2634.943488,1403.456512],'model': 'gru_mid_threetoone'}
 r       = requests.post(url, data=json.dumps(data), headers=headers)
 print("Modelo gru_mid_threetoone:")
-print r.text
+print(r.text)
